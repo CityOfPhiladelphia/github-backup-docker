@@ -4,7 +4,9 @@ A docker container to run https://github.com/josegonzalez/python-github-backup a
 1. `docker build -t github-backup .`
 1. To run locally: 
 
-`docker run -e AWS_SECRET_ACCESS_KEY -e AWS_ACCESS_KEY_ID -e AWS_SECURITY_TOKEN -e GITHUB_ORGANIZATION -e GITHUB_ACCESS_TOKEN -e BACKUP_S3_BUCKET -e SLACK_WEBHOOK_URL github-backup
+```
+docker run -e AWS_SECRET_ACCESS_KEY -e AWS_ACCESS_KEY_ID -e AWS_SECURITY_TOKEN -e GITHUB_ORGANIZATION -e GITHUB_ACCESS_TOKEN -e BACKUP_S3_BUCKET -e SLACK_WEBHOOK_URL github-backup
+```
 
 ## Pushing to ECR
 This project is designed to run on fargate... Your built container should be tagged and pushed to ECR prior to executing in fargate
