@@ -17,6 +17,4 @@ WORKDIR /home
 COPY backup.sh ./
 RUN chmod +x ./backup.sh
 
-# TODO: Determine how to back up initially to reduce backup time.
-# RUN github-backup CityOfPhiladelphia --token $ACCESS_TOKEN --organization -o backup/ --repositories -i
 CMD ["./backup.sh"]
